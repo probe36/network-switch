@@ -1,4 +1,6 @@
-
+#Purpose: make dauily backup from DC to Office
+#Revised: 20200420
+#Version control
 #!bin/bash
 
 #Home dir

@@ -1,0 +1,246 @@
+!Current Configuration:
+!System Description "Powerconnect 6224, 3.2.0.7, VxWorks 6.5"
+!System Software Version 3.2.0.7
+!Cut-through mode is configured as disabled
+!
+configure
+snmp-server location "Toronto"
+snmp-server contact "Li Chen"
+hostname "SAN_SW1"
+clock timezone -5 minutes 0 zone "EAST"
+stack
+member 1 1
+exit
+ip address 192.168.6.5 255.255.255.0
+ip default-gateway 192.168.6.1
+username "admin" password 3683fef564c6e576208a72cee390b168 level 15 encrypted
+aaa authentication login "networkList" line
+aaa authentication enable "networkList" line
+line telnet
+enable authentication networkList
+password 3683fef564c6e576208a72cee390b168 encrypted
+exit
+!
+interface ethernet 1/g1
+channel-group 3 mode on
+storm-control broadcast
+storm-control multicast
+spanning-tree portfast
+mtu 9216
+exit
+!
+interface ethernet 1/g2
+channel-group 3 mode on
+storm-control broadcast
+storm-control multicast
+spanning-tree portfast
+mtu 9216
+exit
+!
+interface ethernet 1/g3
+channel-group 3 mode on
+storm-control broadcast
+storm-control multicast
+spanning-tree portfast
+mtu 9216
+exit
+!
+interface ethernet 1/g4
+channel-group 3 mode on
+storm-control broadcast
+storm-control multicast
+spanning-tree portfast
+mtu 9216
+exit
+!
+interface ethernet 1/g5
+storm-control broadcast
+storm-control multicast
+spanning-tree portfast
+mtu 9216
+exit
+!
+interface ethernet 1/g6
+storm-control broadcast
+storm-control multicast
+spanning-tree portfast
+mtu 9216
+exit
+!
+interface ethernet 1/g7
+storm-control broadcast
+storm-control multicast
+spanning-tree portfast
+mtu 9216
+exit
+!
+interface ethernet 1/g8
+storm-control broadcast
+storm-control multicast
+spanning-tree portfast
+mtu 9216
+exit
+!
+interface ethernet 1/g9
+storm-control broadcast
+storm-control multicast
+spanning-tree portfast
+mtu 9216
+exit
+!
+interface ethernet 1/g10
+storm-control broadcast
+storm-control multicast
+spanning-tree disable
+spanning-tree portfast
+spanning-tree mst 0 external-cost 20000
+mtu 9216
+exit
+!
+interface ethernet 1/g11
+storm-control broadcast
+storm-control multicast
+spanning-tree portfast
+mtu 9216
+exit
+!
+interface ethernet 1/g12
+storm-control broadcast
+storm-control multicast
+spanning-tree disable
+spanning-tree portfast
+spanning-tree mst 0 external-cost 20000
+mtu 9216
+exit
+!
+interface ethernet 1/g13
+storm-control broadcast
+storm-control multicast
+spanning-tree cost 20000
+spanning-tree portfast
+spanning-tree mst 0 external-cost 20000
+mtu 9216
+exit
+!
+interface ethernet 1/g14
+storm-control broadcast
+storm-control multicast
+spanning-tree disable
+spanning-tree cost 20000
+spanning-tree portfast
+spanning-tree mst 0 external-cost 20000
+mtu 9216
+exit
+!
+interface ethernet 1/g15
+storm-control broadcast
+storm-control multicast
+spanning-tree portfast
+mtu 9216
+exit
+!
+interface ethernet 1/g16
+storm-control broadcast
+storm-control multicast
+spanning-tree disable
+spanning-tree cost 20000
+spanning-tree portfast
+spanning-tree mst 0 external-cost 20000
+mtu 9216
+exit
+!
+interface ethernet 1/g17
+storm-control broadcast
+storm-control multicast
+spanning-tree portfast
+mtu 9216
+exit
+!
+interface ethernet 1/g18
+storm-control broadcast
+storm-control multicast
+spanning-tree portfast
+mtu 9216
+exit
+!
+interface ethernet 1/g19
+storm-control broadcast
+storm-control multicast
+spanning-tree portfast
+mtu 9216
+exit
+!
+interface ethernet 1/g20
+storm-control broadcast
+storm-control multicast
+spanning-tree portfast
+mtu 9216
+exit
+!
+interface ethernet 1/g21
+storm-control broadcast
+storm-control multicast
+spanning-tree cost 20000
+spanning-tree portfast
+spanning-tree mst 0 external-cost 20000
+mtu 9216
+exit
+!
+interface ethernet 1/g22
+storm-control broadcast
+storm-control multicast
+spanning-tree cost 20000
+spanning-tree portfast
+spanning-tree mst 0 external-cost 20000
+mtu 9216
+exit
+!
+interface ethernet 1/g23
+storm-control broadcast
+storm-control multicast
+spanning-tree cost 20000
+spanning-tree portfast
+spanning-tree mst 0 external-cost 20000
+mtu 9216
+exit
+!
+interface ethernet 1/g24
+storm-control broadcast
+storm-control multicast
+spanning-tree cost 200000
+spanning-tree portfast
+spanning-tree mst 0 external-cost 200000
+mtu 9216
+exit
+!
+interface ethernet 1/xg1
+storm-control broadcast
+storm-control multicast
+mtu 9216
+exit
+!
+interface ethernet 1/xg2
+storm-control broadcast
+storm-control multicast
+mtu 9216
+exit
+!
+interface ethernet 1/xg3
+storm-control broadcast
+storm-control multicast
+mtu 9216
+exit
+!
+interface ethernet 1/xg4
+storm-control broadcast
+storm-control multicast
+mtu 9216
+exit
+!
+interface port-channel 3
+description 'RACUSE'
+exit
+snmp-server group bsnmp v1 read Default write Default
+snmp-server group DefaultRead v1 context bsnmp read Default write Default
+snmp-server community bsnmp ro
+exit

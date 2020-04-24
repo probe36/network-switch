@@ -1,0 +1,158 @@
+!Current Configuration:
+!System Description "PowerConnect 6224, 3.3.1.10, VxWorks 6.5"
+!System Software Version 3.3.1.10
+!Cut-through mode is configured as disabled
+!
+configure
+snmp-server location "Toronto"
+snmp-server contact "Li Chen"
+hostname "NET SWITCH 1"
+clock timezone -5 minutes 0 zone "EAST"
+stack
+member 1 1
+exit
+ip address 192.168.6.8 255.255.255.0
+ip default-gateway 192.168.6.1
+username "admin" password 3683fef564c6e576208a72cee390b168 level 15 encrypted
+!
+interface ethernet 1/g1
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g2
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g3
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g4
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g5
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g6
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g7
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g8
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g9
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g10
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g11
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g12
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g13
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g14
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g15
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g16
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g17
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g18
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g19
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g20
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g21
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g22
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g23
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/g24
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/xg1
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/xg2
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/xg3
+storm-control broadcast
+storm-control multicast
+exit
+!
+interface ethernet 1/xg4
+storm-control broadcast
+storm-control multicast
+exit
+snmp-server community public rw
+exit
