@@ -1,6 +1,0 @@
-REM remote shutdown script
-@ECHO OFF
-:: Grab remote host access privilege
-net use \\192.168.150.1 /user:paragonlinen\administrator #pAragon1330-A
-:: Initial shutdown process
-shutdown /s /m \\192.168.150.1 /d p:4
